@@ -26,6 +26,10 @@ class PlayerWizard extends Sprite {
         this.speed = this.speedWhenWalking;
         this.angle = 90;
     }
+    handleGameLoop() { // keep marcus in the display area
+        this.y = Math.max(0, this.y);
+        this.y = Math.min(552, this.y);
+    }
 }
 let marcus = new PlayerWizard;
 
