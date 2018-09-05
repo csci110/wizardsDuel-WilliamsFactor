@@ -1,6 +1,6 @@
 import { game, Sprite } from "./sgc/sgc.js";
 
-game.setBackground("floor.png");
+game.setBackground("ground.png");
 
 class PlayerWizard extends Sprite {
     constructor() {
