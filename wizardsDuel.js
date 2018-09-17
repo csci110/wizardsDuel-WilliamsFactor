@@ -6,7 +6,7 @@ class PlayerWizard extends Sprite {
     constructor() {
         super();
         this.name = "Marcus the Wizard";
-        this.setImage("marcusSheet.png");
+        this.setImage("man.png");
         this.width = 48;
         this.height = 48;
         this.x = this.width;
@@ -40,19 +40,22 @@ class PlayerWizard extends Sprite {
             this.spellCastTime = now;
         }
     }
-    
+    handleRightArrowKey() {
+        this.playAnimation("up");
+        this.speed = this.speedWhenWalking;
+        this.angle = 0;
+    }
     handleGameLoop() {
         this.y = Math.max(5, this.y);
         this.y = Math.min(552, this.y);
     }
 }
 let marcus = new PlayerWizard();
-let marcus1 = new PlayerWizard();
 
 class Spell extends Sprite {
     constructor() {
         super();
-        this.speed = 200;
+        this.speed = 500;
         this.height = 48;
         this.width = 48;
         this.defineAnimation("magic", 0, 7);
