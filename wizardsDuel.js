@@ -6,7 +6,7 @@ class PlayerWizard extends Sprite {
     constructor() {
         super();
         this.name = "Marcus the Wizard";
-        this.setImage("man.png");
+        this.setImage("marcusSheet.png");
         this.width = 48;
         this.height = 48;
         this.x = this.width;
